@@ -1,22 +1,19 @@
-import { PAGE_LIMIT } from '@/lib/const/commonConstants';
 import { apiFetch } from './client';
-import { PokemonListResponse } from './types';
+import { PokemonResponse } from './types';
 
 type FetchOptions = {
   cache?: RequestCache;
   revalidate?: number;
 };
 
-export async function fetchPokemonList({
-  limit = PAGE_LIMIT,
-  offset = 0,
+export async function fetchPokemon({
+  id,
   options = {},
 }: {
-  limit?: number;
-  offset?: number;
+  id: string;
   options?: FetchOptions;
-} = {}) {
-  const endpoint = `pokemon?limit=${limit}&offset=${offset}`;
+}) {
+  const endpoint = `pokemon/${id}`;
 
   const option: RequestInit = {
     cache: options.cache ?? 'force-cache',
@@ -25,5 +22,5 @@ export async function fetchPokemonList({
         ? { revalidate: options.revalidate }
         : undefined,
   };
-  return await apiFetch<PokemonListResponse>(endpoint, option);
+  return await apiFetch<PokemonResponse>(endpoint, option);
 }

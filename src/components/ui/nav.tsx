@@ -47,13 +47,13 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/pokemon" onClick={closeNav}>
-            一覧(ISR)
+          <Link href="/pokemon/page/1" onClick={closeNav}>
+            ポケモン一覧
           </Link>
         </li>
         <li>
           <Link href="/favorite" onClick={closeNav}>
-            お気に入り一覧(SSR)
+            お気に入り一覧
           </Link>
         </li>
       </ul>

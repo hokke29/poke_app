@@ -1,6 +1,6 @@
-import styles from './footer.module.scss';
-import Container from './container';
-import Logo from './ui/logo';
+import styles from "./footer.module.scss";
+import Container from "./container";
+import Logo from "./ui/logo";
 
 /**
  * フッターコンポーネント

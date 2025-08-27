@@ -1,4 +1,4 @@
-import styles from './container.module.scss';
+import styles from "./container.module.scss";
 
 /**
  * コンテナコンポーネント
@@ -12,7 +12,7 @@ export default function Container({
   large = false,
 }: {
   children: React.ReactNode;
-  large: boolean;
+  large?: boolean;
 }) {
   return (
     <div className={large ? styles.large : styles.default}>{children}</div>

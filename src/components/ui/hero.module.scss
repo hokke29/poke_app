@@ -1,0 +1,15 @@
+@use 'mixin';
+
+.flexContainer {
+  @include mixin.sideBySideCenter;
+}
+
+.title {
+  font-size: var(--heading1);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.subtitle {
+  font-size: var(--small-heading2);
+}

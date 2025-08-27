@@ -1,4 +1,4 @@
-@use '@/styles/variables';
+@use "mixin";
 
 .list {
   display: flex;
@@ -6,13 +6,13 @@
 }
 
 .list a {
-  @include variables.hoverActive {
+  @include mixin.hoverActive {
     color: var(--accent);
   }
 }
 
 /* PC */
-@include variables.pc {
+@include mixin.pc {
   .btn {
     display: none;
   }
@@ -24,7 +24,7 @@
 }
 
 /* mobile */
-@include variables.mobile {
+@include mixin.mobile {
   /* ボタン */
   .btn {
     all: unset;
@@ -55,7 +55,7 @@
   .btn::after,
   .btn .bar {
     grid-area: 1 / 1;
-    content: '';
+    content: "";
     display: block;
     width: 32px;
     height: 1px;

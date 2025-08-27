@@ -1,10 +1,13 @@
-.default {
+@mixin default {
   width: 92%;
   max-width: 1152px;
   margin: 0 auto;
 }
 
+.default {
+  @include default;
+}
 .large {
-  composes: default;
+  @include default;
   max-width: 1280px;
 }
